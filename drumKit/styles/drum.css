@@ -13,7 +13,7 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background: url("./assets/images/drums.jpg") no-repeat center center fixed;
+  background: url("../assets/images/drums.jpg") no-repeat center center fixed;
 }
 .background .key {
   user-select: none;

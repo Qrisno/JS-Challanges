@@ -32,7 +32,7 @@ $yellow:#ffc600;
     @include flex();
     width: 100vw;
     height: 100vh;
-    background: url('./assets/images/drums.jpg') no-repeat center center fixed;
+    background: url('../assets/images/drums.jpg') no-repeat center center fixed;
     .key {
         @include nonSelectableText();
         @include flex();
