@@ -59,39 +59,7 @@
     <audio data-key="74" src="./assets/audio/snare.wav"></audio>
     <audio data-key="75" src="./assets/audio/tom.wav"></audio>
     <audio data-key="76" src="./assets/audio/tink.wav"></audio>
-    <script>
-        const keys = document.querySelectorAll('.key')
-        window.addEventListener('keydown', function(e) {
-            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-            if (!audio) return;
-            audio.currentTime = 0;
-            audio.play();
-            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
-            key.classList.add('onPlay')
-
-        })
-
-        keys.forEach(key => key.addEventListener('transitionend', (e) => {
-            if (e.propertyName !== 'transform') return
-            key.classList.remove('onPlay')
-        }))
-        keys.forEach(key => key.addEventListener('click', (e) => {
-            let keyCode;
-            if (e.srcElement.innerHTML.length > 1 && e.srcElement.innerHTML[18]) {
-                keyCode = e.srcElement.innerHTML[18].charCodeAt(0);
-            } else if (e.srcElement.innerHTML.length > 1) {
-                keyCode = e.path[1].getAttribute('data-key')
-            } else {
-                keyCode = e.srcElement.innerHTML.charCodeAt(0);
-            }
-
-            const audio = document.querySelector(`audio[data-key="${keyCode}"]`)
-            if (!audio) return;
-            audio.currentTime = 0;
-            audio.play();
-            const key = document.querySelector(`.key[data-key="${keyCode}"]`)
-            key.classList.add('onPlay')
-        }))
+    <script src="./drum.js">
     </script>
 </body>
 
